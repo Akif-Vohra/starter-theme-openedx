@@ -178,7 +178,7 @@ h1,h2,h3,h4{
 			li{
 				a{
 					color:$white;
-					font-weight:300;
+					font-weight:400;
 					padding:15px;
 					margin-top:9px;
 					background:transparent;
@@ -200,7 +200,7 @@ h1,h2,h3,h4{
 					margin-top:9px;
 				    text-transform: uppercase;
 				    font-size: 14px;
-				    font-weight: 300;
+				    font-weight: 400;
 				    background:$red;
 				    &:hover{
 				    	background:$lightred;
@@ -216,7 +216,7 @@ h1,h2,h3,h4{
 				margin-top:9px;
 			    text-transform: uppercase;
 			    font-size: 14px;
-			    font-weight: 300;
+			    font-weight: 400;
 			    background:transparent;
 			    &:hover{
 			    	color:#d3d6d9;
@@ -529,7 +529,7 @@ section.course-info{
 		.course-tabs li a{
 		    text-transform: uppercase;
 		    font-size: 14px;
-		    padding: 15px;
+		    padding:10px 15px;
 			&.active, &:hover, &:focus{
 				background:$lightblue;
 				color: #f3f6f0;
@@ -729,14 +729,15 @@ section.course-info{
 	}
 }
 .view-in-course{
-	.container>div{
-		background:#fff;
-		border:0;
-		&.home, &.info-wrapper, &.course-wrapper{
-	  		box-shadow: 0 18px 62px -28px rgba(0,0,0,0.9);	
+	.container{
+		.home,.info-wrapper,.course-wrapper{
+			padding: 15px 0;
+			background: transparent;
+			border: 0;
+			max-width: 1180px;
+			box-shadow:0 0 0;
 		}
-		&.home{
-			padding: 30px 20px 0;
+		.home{
 			.page-header-main{
 				.page-title{
 					font-weight: 700;
@@ -745,6 +746,68 @@ section.course-info{
 						font-weight: 400;
 					    margin-top: -5px;
 					}
+				}
+			}
+		}
+		.info-wrapper{
+			section.updates, section.handouts, section.handouts h4.handouts-header{
+				padding:0;
+			}
+		}
+		.course-wrapper{
+			*{
+				border-radius:0!important;
+				box-shadow:0!important;
+			}
+			.course-index{
+				.wrapper-course-modes {
+				    border-bottom: 1px solid $verylightgray;
+				    padding: 0 5px 8px 0;
+				    .search-bar .search-button{
+				    	background:$lightblue;
+				    	&:hover{
+				    		background:$blue;
+				    	}
+				    }
+					.courseware-bookmarks-button .bookmarks-list-button{
+						border:1px solid $lightblue;
+						color:$lightblue;
+						&:hover{
+							color:$white;
+							background:$lightblue;
+						}
+					}
+				}
+				.accordion{
+					*{
+						background:transparent!important;
+					}
+					.course-navigation .chapter-content-container .chapter-menu .menu-item.active{
+						a{
+							background:$lightblue!important;
+							color:$white;
+						}
+					}
+					.course-navigation .chapter-content-container.is-open{
+						border-bottom:1px solid $verylightgray;
+					}
+				}
+			}
+			.course-content{
+				padding:0 3% 40px 3%;
+				.path, .xmodule_display.xmodule_SequenceModule .sequence-nav{
+					display:none;
+				}
+				.xblock .xblock h3.unit-title{
+					font-size: 42px;
+				    margin: -10px 0 15px 0;
+				    color: #535659;
+				}
+				.bookmark-button-wrapper{
+					display:none;
+				}
+				.vimeo iframe{
+					width:100%;
 				}
 			}
 		}
@@ -789,7 +852,7 @@ section.course-info{
 		    	    border-radius: 0;
 				    border: 1px solid #e3e6e9;
 				    box-shadow: 0 0 0;
-				    height: 40px;
+				    height: 50px;
 			    }
 			    .field select ~ .icon-caret-down:after{
 			    	border-top:7px solid $lightblue;
@@ -805,6 +868,88 @@ section.course-info{
 			    	}
 			    }
 			}
+		}
+	}
+}
+.modal{
+	border-radius:0;
+	.inner-wrapper{
+		.close-modal:focus{
+			outline:0;
+		}
+		header{
+			hr{
+				display:none;
+			}
+		}
+		form .submit input[type="submit"]{
+			box-shadow: 0 0 0;
+		    border-radius: 0;
+			padding:15px;
+			margin-top:9px;
+		    text-transform: uppercase;
+		    font-size: 14px;
+		    font-weight: 300;
+		    background:$red;
+		    border: 0;
+		    text-shadow: none;
+		    &:hover{
+		    	background:$lightred;
+		    }
+		}
+	}
+}
+.view-profile{
+	.wrapper-profile{
+		padding:60px 0;
+		.wrapper-profile-field-account-privacy{
+			padding: 0;
+		    background: transparent;
+		    border: 0;
+		    font-size:14px;
+		    .u-field-title{
+		    	font-size:14px;
+		    }
+		    .u-field-account_privacy{
+		    	padding:0;
+		    	a{
+					color: #131619;
+				    border-bottom: 3px solid $verylightgray;
+				    padding-bottom: 2px;
+				    &:hover{
+				    	border-bottom:3px solid $black;
+				    	text-decoration:none;
+				    }
+				}
+		    }
+		}
+	    .wrapper-profile-sections{
+			padding:0;
+			.profile-private--message{
+				font-size:14px;
+			}
+		}
+		.profile-section-one-fields{
+			.u-field-username .u-field-value{
+				font-weight:700;
+			}
+			.u-field{
+				padding:10px 10px 10px 3px;
+				border:1px solid transparent;
+			}
+			.u-field.mode-placeholder:hover {
+			    border: 1px dashed $lightblue;
+			    padding: 10px 10px 10px 3px;
+			    color:$lightblue;
+			}
+		}
+		.profile-section-two-fields .u-field.mode-placeholder {
+		    padding: 20px;
+		    border: 1px dashed $lightgray;
+		}
+		.profile-section-two-fields .u-field.mode-placeholder:hover {
+    		border: 1px dashed $lightblue;
+    		color:$lightblue;
 		}
 	}
 }
