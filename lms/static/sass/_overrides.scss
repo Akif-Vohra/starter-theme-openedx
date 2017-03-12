@@ -158,14 +158,16 @@ h1,h2,h3,h4{
 				display:none;
 			}
 			a{
+				width:236px;
+				height:46px;
+				background:url(http://cccctanger.com/compliance.png) no-repeat center center;
 				img{
-					border:1px solid white;
-					height:40px;
+					display:none;
 				}
 			}
 		}
 		h2.course-header{
-	    	width: 77%;	
+	    	width: 69%;	
 		    text-align: center;
 		    padding-top: 12px;
 		    color: #f3f6f9;
@@ -176,6 +178,7 @@ h1,h2,h3,h4{
 		.nav-global{
 			margin-top:0;
 			li{
+				margin:0 0 0 20px;
 				a{
 					color:$white;
 					font-weight:400;
@@ -362,26 +365,29 @@ h1,h2,h3,h4{
 	box-shadow: 0 0 0;
     border: 0;
     background: $black;
-    footer#footer-openedx .colophon{
-    	.copyright, ul a{
-			color:#f3f6f9;
-		}
-		ul a{
-			&:hover{
-				color:$lightgray;
-				border:0;
+    footer#footer-openedx{
+    	max-width:1180px;
+    	.colophon{
+	    	.copyright, ul a{
+				color:#f3f6f9;
 			}
-		}
-		.nav-colophon li a {
-		    color: #f3f6f9;
-		    font-weight: 300;
-		    text-transform: uppercase;
-		    font-size: 12px;
-		    &:hover{
-				color:$lightgray;
-				border:0;
+			ul a{
+				&:hover{
+					color:$lightgray;
+					border:0;
+				}
 			}
-		}
+			.nav-colophon li a {
+			    color: #f3f6f9;
+			    font-weight: 300;
+			    text-transform: uppercase;
+			    font-size: 12px;
+			    &:hover{
+					color:$lightgray;
+					border:0;
+				}
+			}
+	    }	
     }
 }
 section.course-info{
@@ -797,6 +803,17 @@ section.course-info{
 				padding:0 3% 40px 3%;
 				.path, .xmodule_display.xmodule_SequenceModule .sequence-nav{
 					display:none;
+				}
+				.xmodule_display.xmodule_SequenceModule nav.sequence-bottom{
+					.sequence-nav-button{
+						margin:0 15px;
+						background:$lightblue;
+						color:$white;
+						border:0;
+						&:hover{
+							background:$blue;
+						}
+					}
 				}
 				.xblock .xblock h3.unit-title{
 					font-size: 42px;
