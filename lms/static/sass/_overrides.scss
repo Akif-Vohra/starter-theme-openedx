@@ -160,7 +160,7 @@ h1,h2,h3,h4{
 			a{
 				width:236px;
 				height:46px;
-				background:url(http://cccctanger.com/compliance.png) no-repeat center center;
+				background:url(http://lms-dev.cioka.de/static/starter-theme/images/compliance-logo.png) no-repeat center center;
 				img{
 					display:none;
 				}
@@ -382,7 +382,7 @@ h1,h2,h3,h4{
 			    font-weight: 300;
 			    text-transform: uppercase;
 			    font-size: 12px;
-			    &:hover{
+			    &:hover,&:focus{
 					color:$lightgray;
 					border:0;
 				}
@@ -766,6 +766,7 @@ section.course-info{
 				box-shadow:0!important;
 			}
 			.course-index{
+				border-right:1px solid $verylightgray;
 				.wrapper-course-modes {
 				    border-bottom: 1px solid $verylightgray;
 				    padding: 0 5px 8px 0;
@@ -810,8 +811,13 @@ section.course-info{
 						background:$lightblue;
 						color:$white;
 						border:0;
+						padding:0;
 						&:hover{
 							background:$blue;
+							padding:0;
+							.icon{
+								color:$white;
+							}
 						}
 					}
 				}
