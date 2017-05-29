@@ -151,6 +151,7 @@ h1,h2,h3,h4{
 	.wrapper-header{
 		padding:0;
 		height:auto;
+		position:relative;
 		h1.logo{
 			margin:7px 20px 0 0;
 			padding:0;
@@ -212,6 +213,8 @@ h1,h2,h3,h4{
 			}
 		}
 		.user{
+			position:absolute;
+			right:0;
 			.user-link{
 				box-shadow: 0 0 0;
 			    border-radius: 0;
