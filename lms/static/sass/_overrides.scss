@@ -149,7 +149,7 @@ h1,h2,h3,h4{
 	background:$black;
 	padding:0;
 	.wrapper-header{
-		padding:0;
+		padding:0 15px;
 		height:auto;
 		position:relative;
 		h1.logo{
@@ -168,8 +168,8 @@ h1,h2,h3,h4{
 			}
 		}
 		h2.course-header{
-	    	width: 69%;	
-		    text-align: center;
+	    	width: auto;
+		    text-align: left;
 		    padding-top: 12px;
 		    color: #f3f6f9;
 		    text-shadow: none;
@@ -213,8 +213,6 @@ h1,h2,h3,h4{
 			}
 		}
 		.user{
-			position:absolute;
-			right:0;
 			.user-link{
 				box-shadow: 0 0 0;
 			    border-radius: 0;
@@ -469,6 +467,9 @@ section.course-info{
 	    	}
 	    }
 	}
+	.container{
+	    padding:40px 15px;
+	}
 	.details{
 		a{
 			color: #131619;
@@ -534,6 +535,7 @@ section.course-info{
 	    }
 	}
 	nav.wrapper-course-material{
+	    display:none;
 	    margin: 10px 0 13px;
 		.course-tabs li a{
 		    text-transform: uppercase;
@@ -634,6 +636,7 @@ section.course-info{
 	}
 }
 #dashboard-main{
+	padding:40px 15px 20px 15px;
 	#dashboard-search-bar{
 		display:none;
 	}
@@ -654,8 +657,9 @@ section.course-info{
 				    box-shadow: 0 18px 62px -28px rgba(0,0,0,0.9);
 				    background: white;
 				    border: 0;
-				    padding: 25px;
+				    padding: 35px;
 				    .course{
+				    	margin:0;
 				    	.details{
 				    		.wrapper-course-image{
 				    			.cover{
@@ -663,6 +667,9 @@ section.course-info{
 				    			}
 				    		}
 				    		.wrapper-course-details{
+				    			position:relative;
+				    			height:120px;
+				    			margin:0;
 				    			h3.course-title{
 				    				margin-top:-15px;
 				    				display:inline-block;
@@ -672,6 +679,8 @@ section.course-info{
 				    					color:$lightblue;
 				    					margin:0;
 				    					font-size:24px;
+				    					line-height: 33px;
+    									margin-bottom: 10px;
 				    				}
 				    			}
 				    			.course-info{
@@ -679,8 +688,11 @@ section.course-info{
 				    				background:transparent;
 				    			}
 				    			.wrapper-course-actions{
-				    				margin-top:-90px;
+				    				margin-top:0px;
 				    				width:auto;
+				    				position: absolute;
+								    right: 0;
+								    bottom: 0;
 				    				.action-more{
 				    					font-size: 28px;
 									    padding: 8px 0 8px 8px;
@@ -739,6 +751,7 @@ section.course-info{
 }
 .view-in-course{
 	.container{
+		padding:0 15px;
 		.home,.info-wrapper,.course-wrapper{
 			padding: 15px 0;
 			background: transparent;
@@ -773,6 +786,7 @@ section.course-info{
 				.wrapper-course-modes {
 				    border-bottom: 1px solid $verylightgray;
 				    padding: 0 5px 8px 0;
+				    display:none;
 				    .search-bar .search-button{
 				    	background:$lightblue;
 				    	&:hover{
@@ -791,6 +805,13 @@ section.course-info{
 				.accordion{
 					*{
 						background:transparent!important;
+					}
+					.group-heading{
+						padding: 15px 20px 15px 0px;
+						font-size:14px;
+						.icon{
+							display:none;
+						}
 					}
 					.course-navigation .chapter-content-container .chapter-menu .menu-item.active{
 						a{
@@ -826,7 +847,7 @@ section.course-info{
 				}
 				.xblock .xblock h3.unit-title{
 					font-size: 42px;
-				    margin: -10px 0 15px 0;
+				    margin: 0 0 25px 0;
 				    color: #535659;
 				}
 				.bookmark-button-wrapper{
@@ -927,7 +948,7 @@ section.course-info{
 }
 .view-profile{
 	.wrapper-profile{
-		padding:60px 0;
+		padding:60px 15px;
 		.wrapper-profile-field-account-privacy{
 			padding: 0;
 		    background: transparent;
@@ -979,3 +1000,5 @@ section.course-info{
 		}
 	}
 }
+
+
