@@ -674,7 +674,7 @@ section.course-info{
 				    			h3.course-title{
 				    				margin-top:-15px;
 				    				display:inline-block;
-				    				float:left;
+				    				float:none;
 				    				a{
 				    					font-weight:700;
 				    					color:$lightblue;
@@ -818,7 +818,7 @@ section.course-info{
 					.course-navigation .chapter-content-container .chapter-menu{
 					    padding:0;
 					    .menu-item{
-                            .active{
+                            &.active{
                                 a{
                                     background:$lightblue!important;
                                     color:$white;
@@ -1011,5 +1011,3 @@ section.course-info{
 		}
 	}
 }
-
-
