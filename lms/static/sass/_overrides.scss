@@ -175,6 +175,7 @@ h1,h2,h3,h4{
 		    text-shadow: none;
 		    font-weight: 400;
 		    font-size: 16px;
+		    display:none;
 		}
 		.nav-global{
 			margin-top:0;
@@ -686,6 +687,7 @@ section.course-info{
 				    			.course-info{
 				    				float:none;
 				    				background:transparent;
+				    				width:auto;
 				    			}
 				    			.wrapper-course-actions{
 				    				margin-top:0px;
@@ -813,12 +815,21 @@ section.course-info{
 							display:none;
 						}
 					}
-					.course-navigation .chapter-content-container .chapter-menu .menu-item.active{
-						a{
-							background:$lightblue!important;
-							color:$white;
-						}
+					.course-navigation .chapter-content-container .chapter-menu{
+					    padding:0;
+					    .menu-item{
+                            .active{
+                                a{
+                                    background:$lightblue!important;
+                                    color:$white;
+                                }
+                            }
+                            a{
+                                font-size:12px;
+                            }
+                        }
 					}
+
 					.course-navigation .chapter-content-container.is-open{
 						border-bottom:1px solid $verylightgray;
 					}

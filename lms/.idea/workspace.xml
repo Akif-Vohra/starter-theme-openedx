@@ -24,8 +24,8 @@
       <file leaf-file-name="_overrides.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/sass/_overrides.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="645" column="15" lean-forward="true" selection-start-line="645" selection-start-column="15" selection-end-line="645" selection-end-column="15" />
+            <state relative-caret-position="669">
+              <caret line="689" column="47" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1015" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -51,6 +51,9 @@
       <find>group-</find>
       <find>container</find>
       <find>.container</find>
+      <find>wrapper-header</find>
+      <find>course-header</find>
+      <find>menu-item</find>
       <find>course-info</find>
     </findStrings>
     <dirStrings>
@@ -210,8 +213,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/sass/_overrides.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="645" column="15" lean-forward="true" selection-start-line="645" selection-start-column="15" selection-end-line="645" selection-end-column="15" />
+        <state relative-caret-position="669">
+          <caret line="689" column="47" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1015" selection-end-column="0" />
           <folding />
         </state>
       </provider>
