@@ -12,20 +12,71 @@ course_mode_class = course_mode if course_mode else ''
 <html class="no-js" lang="en">
 <head dir="${dir_rtl}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>${document_title}</title>
 
     <%static:css group='style-certificates'/>
+    <style type="text/css">
+        .accomplishment-rendering{
+            background-image: url(/asset-v1:Compliance+CS1+2018+type@asset+block@image001.png);
+        }
+
+       .accomplishment-rendering .accomplishment-statement, .accomplishment-rendering .accomplishment-signatories {
+               border-bottom: 0 solid #f5f5f5;
+       }
+
+       .signatory{
+          float : left;
+       }
+    </style>
+    <style type="text/css" media="print">
+.signatory{
+              float : left;
+                     }
+
+body {
+    height: auto;
+    margin: 1.75rem 1.875rem 0 1.875rem !important;
+    padding: 0;
+}
+	.accomplishment-rendering .accomplishment-statement {
+    width: calc(70.00% - 1rem);
+}
+
+	@page
+    {
+        size:  auto;
+        margin: 0mm;
+    }
+
+.accomplishment-rendering .accomplishment-signatories .signatory-signature {
+    height: 3.25rem;
+    max-width: 100%;
+    margin-top: 0;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+	.accomplishment-rendering .accomplishment-signatories .signatory-name {
+    font-size: 1.50rem;
+}
+	.accomplishment-rendering .accomplishment-signatories .signatory-credentials {
+    font-size: 1.0rem;
+}
+        .accomplishment-rendering .wrapper-statement-and-signatories {
+                border-bottom: 0 solid #f5f5f5;
+        }
+    </style>
+
 </head>
 
 <body class="layout-accomplishment view-valid-accomplishment ${dir_rtl} certificate certificate-${course_mode_class}" data-view="valid-accomplishment">
 
     <div class="wrapper-view" dir="${dir_rtl}">
 
-        <%include file="_accomplishment-header.html" />
-
+	    <!-- <%include file="_accomplishment-header.html" /> -->
+ 
         <hr class="divider sr-only">
 
         ${self.body()}

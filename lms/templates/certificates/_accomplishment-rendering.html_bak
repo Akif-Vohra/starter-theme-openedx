@@ -12,33 +12,29 @@ course_mode_class = course_mode if course_mode else ''
             <span class="deco-corner deco-corner-tr"></span>
             <span class="deco-corner deco-corner-bl"></span>
             <span class="deco-corner deco-corner-br"></span>
-	    <div class="wrapper-statement-and-signatories" style="text-align:center;">
-                <!--h2 class="hd-2"><strong>Compliance Schulung</strong></h2> -->
-                <img class="src" src="/asset-v1:Compliance+CS1+2018+type@asset+block@logo.png" alt="">
-            </div>
-            <!-- div class="accomplishment-type" style="margin-bottom:0.0rem;">
-                <span class="accomplishment-type-symbol" style="display:block;">
-                     <img class="src" src="/asset-v1:Compliance+CS1+2018+type@asset+block@logo.png" alt=""> 
-                </span> 
 
-        </div> -->
+            <div class="accomplishment-type">
+                <span class="accomplishment-type-symbol">
+                    <img class="src" src="/static/certificates/images/ico-${course_mode_class}.png" alt="">
+                </span>
+
+                <span class="accomplishment-type-label hd-4">${document_title}</span>
+            </div>
 
             <div class="wrapper-statement-and-signatories">
                 <div class="accomplishment-statement">
                     <p class="accomplishment-statement-lead">
-		    <strong class="accomplishment-recipient hd-1 emphasized"><h1>Teilnahmezertifikat</h1></strong>
-		    <span class="accomplishment-summary copy copy-lead"><b>${accomplishment_copy_name}</b></span>
+                        <strong class="accomplishment-recipient hd-1 emphasized">${accomplishment_copy_name | h}</strong>
+                        <span class="accomplishment-summary copy copy-lead">${accomplishment_copy_description_full}</span>
 
-                        <span class="accomplishment-course hd-2">
-	                    <span>hat erfolgreich am Onlinekurs</span>			 
-    			    <!-- <span class="accomplishment-course-org">${accomplishment_copy_course_org}  </span> -->
-			    <!-- <span class="accomplishment-course-number">${course_number}</span> -->
-			    <span class="accomplishment-course-name emphasized"><b>${accomplishment_copy_course_name}</b></span>
-			    <span>teilgenommen.</span>
+                        <span class="accomplishment-course hd-1 emphasized">
+                            <span class="accomplishment-course-org">${accomplishment_copy_course_org}  </span>
+                            <span class="accomplishment-course-number">${course_number}</span>:
+                            <span class="accomplishment-course-name">${accomplishment_copy_course_name}</span>
                         </span>
                     </p>
-                    <br/>   
-                    <p class="accomplishment-statement-detail copy copy-lead">Entsprechend den gesetzlichen Vorschriften wurde der Teilnehmer in diesem Videokurs durch den Referenten Dr. Stephan Gärtner, Experte für Datenschutzrecht, mit den Vorschriften und den jeweiligen besonderen Erfordernissen des Datenschutzes vertraut gemacht. Neben Grundlagen wurden die Voraussetzungen für den rechtskonformen Umgang mit personenbezogenen Daten sowie die technischen und organisatorischen Schutzmaßnahmen geschult.</p>
+
+                    <p class="accomplishment-statement-detail copy copy-lead">${accomplishment_copy_course_description}</p>
                 </div>
 
                 % if mode != 'base':
@@ -50,11 +46,11 @@ course_mode_class = course_mode if course_mode else ''
                             % if certificate_data:
                                 % for signatory in certificate_data.get('signatories', []):
                                 <div class="signatory">
-                                    <img style="max-height:8.25rem;display:block;" class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
+                                    <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
 
-				    <h3 class="signatory-name hd-3"><b>${signatory['name']}</b></h3>
+                                    <h4 class="signatory-name hd-5">${signatory['name']}</h4>
                                     <p class="signatory-credentials copy copy-micro">
-				    <!-- <span class="role">${signatory['title']}</span> -->
+                                        <span class="role">${signatory['title']}</span>
                                         <span class="organization">${signatory['organization']}</span>
                                     </p>
                                 </div>
@@ -66,6 +62,25 @@ course_mode_class = course_mode if course_mode else ''
                 % endif
             </div>
 
+            <div class="accomplishment-orgs">
+                <h3 class="accomplishment-orgs-title sr-only">${_("Supported by the following organizations")}</h3>
+
+                <ul class="wrapper-orgs list-orgs">
+                    <li class="wrapper-organization">
+                        <div class="organization organization-edX">
+                            <img class="organization-logo" src="${logo_src}" alt="${platform_name}">
+                        </div>
+                    </li>
+
+                    % if organization_logo:
+                    <li class="wrapper-organization">
+                        <div class="organization">
+                            <img class="organization-logo" src="${organization_logo.url}" alt="${platform_name}">
+                        </div>
+                    </li>
+                    % endif
+                </ul>
+            </div>
         </div>
     </div>
 
